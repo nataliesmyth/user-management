@@ -129,3 +129,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = "dashboard"
 
 LOGOUT_REDIRECT_URL = "dashboard"
+
+# Tell django we are going to use a simple SMTP server
+EMAIL_HOST = "localhost"
+EMAIL_PORT = 1025

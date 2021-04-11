@@ -1,4 +1,4 @@
-<!-- users/templates/registration/login.html -->
+<!--users/templates/registration/login.html-->
 
 {% extends 'base.html' %}
 
@@ -12,7 +12,7 @@
 </form>
 
 <a href="{% url 'dashboard' %}">Back to dashboard</a>
-<a href="{% url 'password_reset' %}">Reset Password</a>
+<a href="{% url 'password_reset' %}">Reset password</a>
 {% endblock %}
 
 <!-- This will display a Login heading, followed by a login form. Django uses a dictionary, also known as a context, to pass data to a template while rendering it. In this case, a variable called form will already be included in the context—all you need to do is display it. Using {{ form.as_p }} will render the form as a series of HTML paragraphs, making it look a bit nicer than just {{ form }}.
