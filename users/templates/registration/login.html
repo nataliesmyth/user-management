@@ -1,0 +1,19 @@
+<!-- users/templates/registration/login.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Login</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Login">
+</form>
+
+<a href="{% url 'dashboard' %}">Back to dashboard</a>
+{% endblock %}
+
+<!-- This will display a Login heading, followed by a login form. Django uses a dictionary, also known as a context, to pass data to a template while rendering it. In this case, a variable called form will already be included in the context—all you need to do is display it. Using {{ form.as_p }} will render the form as a series of HTML paragraphs, making it look a bit nicer than just {{ form }}.
+
+The {% csrf_token %} line inserts a cross-site request forgery (CSRF) token, which is required by every Django form. There’s also a button for submitting the form and, at the end of the template, a link that will take your users back to the dashboard. -->
