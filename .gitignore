@@ -106,3 +106,8 @@ celerybeat-schedule.*
 # SageMath parsed files 
 *.sage.py
 venv
+awesome_website/settings.py
+users/__pycache__
+awesome_website/__pycache__
+awesome_website/__init__.py
+users/migrations
