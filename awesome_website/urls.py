@@ -1,9 +1,10 @@
 # awesome_website/urls.py
 
-from django.conf.urls import include, url
 from django.contrib import admin
+from django.urls import path, include
 
 urlpatterns = [
-    url(r"^", include("users.urls")),
-    url(r"^admin/", admin.site.urls),
+    path('admin/', admin.site.urls),
+    path('', include('events.urls')),
+    path('dashboard/', include("users.urls")),
 ]
