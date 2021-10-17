@@ -6,7 +6,7 @@ from datetime import datetime
 # Create your views here.
 def home(request, year=datetime.now().year, month=datetime.now().strftime('%B')):
     name = 'Natalie'
-    month = month.title()
+    month = month.capitalize()
 
     # Convert month from name to number
     month_number = list(calendar.month_name).index(month)
