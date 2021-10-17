@@ -1,16 +1,21 @@
-<center>
+{% extends 'events/base.html' %}
 
-    <h1>Hello {{ name  }}! Events for
+{% block content %}
+    <center>
+
+        <h1>Hello {{ name  }}! Events for
+            
+            {{ month }}
+            {{  year }}
+        </h1>
+        {{ time }}
         
-        {{ month }}
-        {{  year }}
-    </h1>
-    {{ time }}
-    
-    {{ cal|safe }}
+        {{ cal|safe }}
 
-    <br><br><br><br>
+        <br><br><br><br>
 
-    &copy; Natalie Smyth {{ current_year }}
+        &copy; Natalie Smyth {{ current_year }}
 
- </center>
+    </center>
+
+{% endblock %}
