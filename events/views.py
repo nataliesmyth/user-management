@@ -1,10 +1,10 @@
 from django.shortcuts import render
 import calendar
-from calendar import HTMLCalendar
+from calendar import HTMLCalendar, month_name
 from datetime import datetime
 
 # Create your views here.
-def home(request, year=2021, month="October"):
+def home(request, year=datetime.now().year, month=datetime.now().strftime('%B')):
     name = 'Natalie'
     month = month.title()
 
