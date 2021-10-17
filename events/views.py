@@ -24,7 +24,7 @@ def home(request, year=datetime.now().year, month=datetime.now().strftime('%B'))
 
     return render(request, 
     # the curly brackets below is the context dictionary, which allows us to pass data from the backend to the front end of your website
-    'home.html', {
+    'events/home.html', {
         'name': name,
         'year': year,
         'month': month,
